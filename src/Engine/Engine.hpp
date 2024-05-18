@@ -1,11 +1,13 @@
-#ifndef _ENGINE_HPP_
-#define _ENGINE_HPP_
+#ifndef __ENGINE_HPP_
+#define __ENGINE_HPP_
 
 class Window;
 class Event;
+class Sprite;
 
+#include "System/System.h"
 #include "Window/Window.cpp"
-// #include "Graphics/Graphics.cpp"
 #include "Event/Event.cpp"
+#include "Graphics/Sprite/Sprite.cpp"
 
 #endif

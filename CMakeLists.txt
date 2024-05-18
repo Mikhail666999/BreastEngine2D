@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.0)
 project(app)
 
-# Используем прямые слэши
-list(APPEND CMAKE_PREFIX_PATH "D:/1MyAll1/projects/c++/.LIBS/sfml/32/SFML-2.5.1")
+# set(SFML_PATH "D:/1MyAll1/projects/c++/.LIBS/sfml/32/SFML-2.5.1")
+# list(APPEND CMAKE_PREFIX_PATH SFML_PATH)
 
-find_package(SFML 2.5 REQUIRED COMPONENTS system window graphics)
+# find_package(SFML 2.5 REQUIRED COMPONENTS system window graphics)
 
-set(CXXFLAGS "-s -O2 -m32")
+# set(CXXFLAGS "-s -O2 -m32")
 
 add_executable(app src/main.cpp)
 

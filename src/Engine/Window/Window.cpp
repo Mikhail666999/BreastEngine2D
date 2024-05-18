@@ -2,30 +2,47 @@
 
 sf::RenderWindow Window::m_window;
 
-bool Window::Open(string name, int width, int height) {
-	m_window.create(sf::VideoMode(width, height), name);
+// Window
+bool Window::Open( string name, int width, int height, bool resize )
+{
+	m_window.create( sf::VideoMode( width, height ), name, resize ? sf::Style::Default : sf::Style::Titlebar | sf::Style::Close );
 	return true;
 }
 
-bool Window::Close() {
+bool Window::Close()
+{
 	m_window.close();
 	return true;
 }
 
-bool Window::IsOpen() {
+bool Window::IsOpen()
+{
 	return m_window.isOpen();
 }
 
-bool Window::Display() {
+
+// Draw
+template <class N>
+bool Window::Draw( N n ) 
+{
+	m_window.draw( n.Draw() );
+}
+
+bool Window::Display()
+{
 	m_window.display();
 	return true;
 }
 
-bool Window::Clear() {
+bool Window::Clear()
+{
 	m_window.clear();
 	return true;
 }
 
-bool Window::PollEvent(sf::Event &e) {
-	return m_window.pollEvent(e);
+
+// Event
+bool Window::PollEvent( sf::Event &e )
+{
+	return m_window.pollEvent( e );
 }
