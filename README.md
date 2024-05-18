@@ -5,3 +5,5 @@
 3. Зайдите в созданную на `1.` папку
 4. Введите `cmake ..` я испльзую так `cmake .. -G "MinGW Makefiles"`
 5. И не забудьте добавить dll'ки в bin) ( попытаюсь избавиться )
+
+# Думаю попробовать https://developer.electricimp.com/squirrel/squirrelcrib (Squirrel) синтаксис си подобный
